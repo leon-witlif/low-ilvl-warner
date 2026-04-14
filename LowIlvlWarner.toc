@@ -1,0 +1,17 @@
+## Interface: 120001
+## Title: LowIlvlWarner
+## Notes: A World of Warcraft addon for Midnight (12.x.x) that warns you when players in your party or raid are below a specified item level threshold
+## Author: leon-witlif
+## Version: 1.0.0
+## SavedVariables: LowIlvlWarnerDB
+## OptionalDeps: LibStub, CallbackHandler-1.0, LibDataBroker-1.1, LibDBIcon-1.0
+
+libs\LibStub\LibStub.lua
+libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
+libs\LibDBIcon-1.0\LibDBIcon-1.0.lua
+
+LowIlvlWarner.lua
+Helper.lua
+Core.lua
+Options.lua
