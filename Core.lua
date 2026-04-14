@@ -154,6 +154,7 @@ local function EnqueueInspect(unit)
     for _, u in ipairs(inspectQueue) do
         if u == unit then return end
     end
+
     inspectQueue[#inspectQueue + 1] = unit
     LIW.DBG("Queued inspect for " .. unit .. " (queue length: " .. #inspectQueue .. ")")
 
@@ -320,7 +321,6 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
 
         if not resolvedUnit then
             LIW.DBG("INSPECT_READY: could not resolve unit for guid=" .. tostring(guid) .. ", ignoring")
-            ClearInspectPlayer()
             inspectActive = false
             if #inspectQueue > 0 then
                 inspectScheduled = true
@@ -336,8 +336,6 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
             resolvedName, resolvedUnit, ilvl, flooredIlvl))
 
         memberIlvl[guid] = { name = resolvedName, ilvl = flooredIlvl }
-
-        ClearInspectPlayer()
 
         if inspectQueue[1] and UnitGUID(inspectQueue[1]) == guid then
             table.remove(inspectQueue, 1)
