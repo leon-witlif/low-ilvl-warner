@@ -11,9 +11,9 @@ LIW.DB_DEFAULTS = {
     enableRaid  = true,
     minimap     = { hide = false },
     warnFrame   = { x = -90, y = -150 }, -- TOPLEFT/TOPLEFT
-    configFrame = { x = 394, y = -4   },  -- CENTER/CENTER
+    configFrame = { x = 394, y = -4   }, -- CENTER/CENTER
 }
 
-LIW.INSPECT_DELAY      = 2.0 -- seconds between inspect requests
-LIW.FAST_SCAN_INTERVAL = 15  -- seconds between retries for unknown ilvls
-LIW.SLOW_SCAN_INTERVAL = 60  -- seconds between full re-scans for known ilvls
+LIW.INSPECT_DELAY      = 10  -- seconds between inspect requests
+LIW.FAST_SCAN_INTERVAL = 60  -- seconds between retries for unknown ilvls
+LIW.SLOW_SCAN_INTERVAL = 120 -- seconds between full re-scans for known ilvls
